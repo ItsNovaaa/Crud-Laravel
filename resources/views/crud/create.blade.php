@@ -24,9 +24,57 @@
                         <input type="text" class="form-control" name="nama" id="nama">
                     </div>
                     <div class="mb-3">
-                        <label for="jurusan" class="form-label">Jurusan</label>
+                        <label for="jurusan" class="form-label">Jabatan</label>
                         <input type="text" class="form-control" name="jurusan" id="jurusan">
                     </div>
+                    <div class="mb-3">
+                      <label for="departemen" class="form-label">departemen</label>
+                      <input type="text" class="form-control" name="departemen" id="departemen">
+                    </div>                   
+                    <div class="mb-3">
+                      <label for="tempat_lahir" class="form-label">tempat_lahir</label>
+                      <input type="text" class="form-control" name="tempat_lahir" id="tempat_lahir">
+                    </div> 
+                    <div class="mb-3">
+                      <label for="alamat" class="form-label">No.HP</label>
+                      <input type="text" class="form-control" name="alamat" id="alamat">
+                    </div>                   
+                    <div class="mb-3">
+                      <label for="tgl_lahir" class="form-label">Tanggal Lahir</label>
+                      <input type="date" class="form-control" name="tgl_lahir" id="tgl_lahir">
+                    </div>
+                    <div class="mb-3">
+                      <label for="darah" class="form-label">Gol.darah</label>
+                      <select name="darah">
+                        <option value="a">A</option>
+                        <option value="b">B</option>
+                        <option value="c">C</option>
+                      </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="agama" class="form-label">agama</label>
+                    <select name="agama">
+                      <option value="islam">Islam</option>
+                      <option value="nonmus">Non islam</option>
+                      <option value="kafir">Tidak Punya</option>
+                  </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="status" class="form-label">status</label>
+                    <select name="status">
+                      <option value="Nikha">menikah</option>
+                      <option value="belum_Nikah">Belum nikah</option>
+                      <option value="Single">Single Parents</option>
+                  </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="status" class="form-label">kelamin</label>
+                    <select name="kelamin">
+                      <option value="pria">Pria</option>
+                      <option value="wanita">Wanita</option>
+                  </select>
+                  </div>
+
                     <button type="submit" class="btn btn-primary">Tambah data</button>
                 </form>
           </div>

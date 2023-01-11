@@ -38,16 +38,30 @@ class controller_dasar extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nis' => 'required|min:1|max:9',
-            'nama' => 'required|min:2|max:225',
-            'jurusan' => 'required|min:2|max:12',
+            'nis' => 'required',
+            'nama' => 'required',
+            'jurusan' => 'required',
+            'departemen' => 'required',
+            'alamat' => 'required',
+            'tempat_lahir' => 'required',
+            'agama' => 'required',
+            'status' => 'required',
+            'tgl_lahir' => 'required|date',
+            'darah' => 'required',
+
         ]);
 
-        $path = $request->file('image')->store('public/images');
         $crud = new crud;
         $crud->nis = $request->nis;
         $crud->nama = $request->nama;
         $crud->jurusan = $request->jurusan;
+        $crud->departemen = $request->departemen;
+        $crud->alamat = $request->alamat;
+        $crud->tempat_lahir = $request->tempat_lahir;
+        $crud->agama = $request->agama;
+        $crud->status = $request->status;
+        $crud->tgl_lahir = $request->tgl_lahir;
+        $crud->darah = $request->darah; 
         $crud->save();
 
         return to_route('crud.index')->with('Selamat,Data Telah Disimpan');
@@ -87,15 +101,36 @@ class controller_dasar extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'nis' => 'required|min:1|max:9',
-            'nama' => 'required|min:2|max:225',
-            'jurusan' => 'required|min:2|max:12',
+            'nis' => 'required',
+            'nama' => 'required',
+            'jurusan' => 'required',
+            'departemen' => 'required',
+            'alamat' => 'required',
+            'tempat_lahir' => 'required',
+            'agama' => 'required',
+            'status' => 'required',
+            'tgl_lahir' => 'required|date',
+            'darah' => 'required',
+            'Kelamin' => 'required',
+
+
+
         ]);
 
         $crud = crud::find($id);
         $crud->nis = $request->nis;
         $crud->nama = $request->nama;
         $crud->jurusan = $request->jurusan;
+        $crud->departemen = $request->departemen;
+        $crud->alamat = $request->alamat;
+        $crud->tempat_lahir = $request->tempat_lahir;
+        $crud->agama = $request->agama;
+        $crud->status = $request->status;
+        $crud->tgl_lahir = $request->tgl_lahir;
+        $crud->darah = $request->darah; 
+        $crud->kelamin = $request->kelamin; 
+
+
         $crud->save();
 
         return to_route('crud.index')->with('Selamat,Data Telah Disimpan');

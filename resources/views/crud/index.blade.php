@@ -15,9 +15,17 @@
           <table class="table">
             <thead>
               <th>No</th>
-              <th>NIS</th>
+              <th>NIK</th>
               <th>Nama</th>
-              <th>Jurusan</th>
+              <th>Jabatan</th> {{-- jurusan --}}
+              <th>departemen</th>
+              <th>Tgl lahir</th>
+              <th>Tempat lahir</th>
+              <th>Gol.Darah</th>
+              <th>Agama</th>
+              <th>Status</th>
+              <th>No.hp</th>{{-- alamat --}}
+              <th>Jenis Kelamin</th>
               <th>Aksi</th>
             </thead>
             <tbody>
@@ -27,6 +35,14 @@
                 <td>{{ $hasil->nis }}</td>
                 <td>{{ $hasil->nama }}</td>
                 <td>{{ $hasil->jurusan }}</td>
+                <td>{{ $hasil->departemen }}</td>
+                <td>{{ $hasil->tempat_lahir }}</td>
+                <td>{{ $hasil->tgl_lahir }}</td>
+                <td>{{ $hasil->darah }}</td>
+                <td>{{ $hasil->agama }}</td>
+                <td>{{ $hasil->status }}</td>
+                <td>{{ $hasil->alamat }}</td>
+                <td>{{ $hasil->kelamin }}</td>
                 <td>
                   <form action="{{ route('crud.destroy',$hasil->id) }} " method="POST">
                     @csrf

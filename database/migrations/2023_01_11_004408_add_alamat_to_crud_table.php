@@ -13,13 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('crud', function (Blueprint $table) {
-            $table->id();
-            $table->string('nis');
-            $table->string('nama');
-            $table->string('jurusan');
+        Schema::table('dasar', function (Blueprint $table) {
             $table->string('alamat');
-            $table->timestamps();
         });
     }
 
@@ -30,6 +25,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('crud');
+       Schema::dropIfExists('crud');
     }
 };
